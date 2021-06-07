@@ -51,6 +51,7 @@ public class App
     {
         App myApp = new App();
         int amount = myApp.getAmount();
+        input.nextLine();
         String state = myApp.getState();
         double taxRate = myApp.calculateStateTax(state);
 
@@ -66,13 +67,13 @@ public class App
     }
 
     public int getAmount() {
-        System.out.println("What is the order amount? ");
+        System.out.print("What is the order amount? ");
         int amount = input.nextInt();
         return amount;
     }
 
     public String getState(){
-        System.out.println("What state do you live in? ");
+        System.out.print("What state do you live in? ");
         String state = input.nextLine();
         return state;
     }
@@ -88,7 +89,7 @@ public class App
     }
 
     public double getCountyTax(){
-        System.out.println("What county do you live in? ");
+        System.out.print("What county do you live in? ");
         String county = input.nextLine();
         if (county.equals("Eau Claire")){
             return 0.005;
